@@ -1,9 +1,7 @@
 import React, { ReactElement, ReactNode, useState } from 'react';
+import logo from './logo.svg';
 import './App.css';
-import UseStateComponent from './useStateComponent';
-import UseEffectComponent from './useEffectComponent';
-import UseContextComponent from './useContextComponent';
-// import { title } from 'process';
+import { title } from 'process';
 
 function Heading({ title }: { title: string }) {
   return <h1>{title}</h1>
@@ -51,15 +49,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <UseContextComponent />
-        <UseEffectComponent />
-        <UseStateComponent />
+        <img src={logo} className="App-logo" alt="logo" />
         <TextWithNumber>{(number) => <strong>Today's number is {number}</strong>}</TextWithNumber>
         <Heading title={"Hello Danh"} />
         <List items={['Danh', 'AAA']} />
         <HeadingWithContent><b>Hi</b></HeadingWithContent>
         <Container>hi</Container>
-        <MyHeader title="test" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
