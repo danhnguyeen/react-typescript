@@ -2,10 +2,10 @@ import { createContext } from 'react';
 
 const initialState = {
   first: '',
-  last: ''
+  last: '',
 }
 
-export type UserState = typeof initialState;
+export type UserState = typeof initialState & { setUser?: () => void };
 
 const context = createContext<typeof initialState>(initialState)
 

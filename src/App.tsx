@@ -3,6 +3,7 @@ import './App.css';
 import UseStateComponent from './useStateComponent';
 import UseEffectComponent from './useEffectComponent';
 import UseContextComponent from './useContextComponent';
+import UseReducerComponent from './useReducerComponent';
 // import { title } from 'process';
 
 function Heading({ title }: { title: string }) {
@@ -51,6 +52,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <UseReducerComponent />
         <UseContextComponent />
         <UseEffectComponent />
         <UseStateComponent />
