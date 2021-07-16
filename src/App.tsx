@@ -4,6 +4,7 @@ import UseStateComponent from './useStateComponent';
 import UseEffectComponent from './useEffectComponent';
 import UseContextComponent from './useContextComponent';
 import UseReducerComponent from './useReducerComponent';
+import UseRefComponent from './useRefComponent';
 // import { title } from 'process';
 
 function Heading({ title }: { title: string }) {
@@ -52,9 +53,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h3>useRef</h3>
+        <UseRefComponent />
+        <h3>useReducer</h3>
         <UseReducerComponent />
+        <h3>UserContext</h3>
         <UseContextComponent />
+        <h3>useEffect</h3>
         <UseEffectComponent />
+        <h3>useState</h3>
         <UseStateComponent />
         <TextWithNumber>{(number) => <strong>Today's number is {number}</strong>}</TextWithNumber>
         <Heading title={"Hello Danh"} />

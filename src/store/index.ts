@@ -1,12 +1,16 @@
 import { createContext } from 'react';
 
-const initialState = {
+export interface UserContextInterface {
+  first: string,
+  last: string,
+  setUser?: () => void
+}
+
+const initialState:UserContextInterface = {
   first: '',
   last: '',
 }
 
-export type UserState = typeof initialState & { setUser?: () => void };
-
-const context = createContext<typeof initialState>(initialState)
+const context = createContext<UserContextInterface>(initialState)
 
 export default context;
