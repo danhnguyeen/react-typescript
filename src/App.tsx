@@ -6,6 +6,7 @@ import UseContextComponent from './useContextComponent';
 import UseReducerComponent from './useReducerComponent';
 import UseRefComponent from './useRefComponent';
 import UseCustomHookComponent from './useCustomHookComponent';
+import EvenMoreReactComponent from './EvenMoreReactComponent';
 // import { title } from 'process';
 
 function Heading({ title }: { title: string }) {
@@ -54,6 +55,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h3>Event More React Component</h3>
+        <EvenMoreReactComponent />
         <h3>Custom Hook</h3>
         <UseCustomHookComponent />
         <h3>useRef</h3>

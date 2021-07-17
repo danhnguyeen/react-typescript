@@ -22,7 +22,7 @@ function useFetchData<Payload>(url: string): { data: Payload | null, done: boole
       setData(d);
       setDone(true)
     })
-  }, [])
+  }, [url])
 
   return { data, done }
 }
