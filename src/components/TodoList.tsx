@@ -1,12 +1,12 @@
 import * as React from "react";
 import { Button, Input, Flex, Checkbox, Heading } from "@chakra-ui/react";
-import { useDispatch, useSelector } from "react-redux";
-import { Store } from "../store/types";
-import { deleteTodo, toggleTodo, updateTodo } from "../store/actions";
+import { deleteTodo, toggleTodo, updateTodo } from "../store/store";
+import { useAppDispatch, useAppSelector } from "../hooks";
+import { Todo } from "../store/types";
 
 function TodoListItems() {
-  const todos = useSelector((state: Store) => state.todos);
-  const dispatch = useDispatch();
+  const todos = useAppSelector((state) => state.totos.todos);
+  const dispatch = useAppDispatch();
 
   return (
     <>
@@ -17,7 +17,9 @@ function TodoListItems() {
             mx={2}
             value={todo.text}
             onChange={(event) =>
-              dispatch(updateTodo(todo.id, event.target.value))
+              dispatch(
+                updateTodo({ ...todo, text: event.target.value } as Todo)
+              )
             }
           />
           <Button onClick={() => dispatch(deleteTodo(todo.id))}>Delete</Button>
